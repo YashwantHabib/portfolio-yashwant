@@ -4,6 +4,7 @@ export const intro: Intro = {
   name: "Yashwant Habib",
   title: "Fullstack Developer",
   location: "Bagalkot, India",
-  tagline:
-    "Your friendly neighborhood developer building clean, thoughtful apps.",
+  taglineStart: "Your friendly neighborhood",
+  taglineStrike: "Spider-Man",
+  taglineEnd: "developer building clean, thoughtful apps.",
 };

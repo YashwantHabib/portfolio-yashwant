@@ -18,5 +18,7 @@ export type Intro = {
   name: string;
   title: string;
   location: string;
-  tagline: string;
+  taglineStart: string;
+  taglineStrike: string;
+  taglineEnd: string;
 };

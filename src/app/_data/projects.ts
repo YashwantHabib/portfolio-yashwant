@@ -11,8 +11,9 @@ export const projects: Project[] = [
   },
   {
     title: "Movie Booking Site",
-    description: "A full-stack ticket booking platform with MySQL backend.",
-    tech: ["React", "Node.js", "MySQL"],
+    description:
+      "A responsive movie booking web app to browse films, check showtimes, and book seats in real-time with a sleek and intuitive UI.",
+    tech: ["JavaScript", "Node.js", "MySQL"],
     year: "2023",
   },
 ];
