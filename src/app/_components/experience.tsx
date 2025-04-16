@@ -2,7 +2,7 @@ import { experience } from "../_data/experience";
 
 export default function Experience() {
   return (
-    <div className="flex-1">
+    <div className="flex-1 py-6 sm:py-0 sm:pr-3">
       <div className="text-stone-500 text-sm">Experience</div>
       <div>
         {experience.map((exp) => (
@@ -12,8 +12,8 @@ export default function Experience() {
               <div className="flex-1 border-t border-stone-700" />
               <span className="text-sm text-stone-500 ">{exp.duration}</span>
             </div>
-            <div className="py-2 text-sm text-stone-400 ">{exp.role}</div>
-            <div className="text-sm text-stone-500">{exp.description} </div>
+            <p className="py-2 text-sm text-stone-400 ">{exp.role}</p>
+            <p className="text-sm text-stone-500">{exp.description} </p>
           </div>
         ))}
       </div>
