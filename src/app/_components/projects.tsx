@@ -1,14 +1,17 @@
 import { projects } from "../_data/projects";
-
+import Link from "next/link";
 export default function Projects() {
   return (
-    <div className="flex-1 py-6 sm:py-0 sm:pl-3">
+    <div>
       <div className="text-stone-500 text-xs text-left sm:text-right">
         Projects
       </div>
       <div>
-        {projects.map((project) => (
-          <div key={project.title} className="py-6 cursor-pointer">
+        {projects.slice(0, 2).map((project) => (
+          <div
+            key={project.title}
+            className="p-2 my-4 rounded-lg cursor-pointer hover:bg-zinc-900"
+          >
             <div className="flex items-center gap-4">
               <span className="text-sm text-stone-100 underline decoration-wavy decoration-stone-600 hover:decoration-stone-400">
                 {project.title}
@@ -19,7 +22,7 @@ export default function Projects() {
             {project.tech.map((tech) => (
               <span
                 key={tech}
-                className="inline-block text-[10px] bg-stone-100 text-stone-800 px-2 py-1 my-2 mr-1 rounded-full"
+                className="inline-block text-[8px] bg-stone-100 text-stone-800 px-2 py-1 my-2 mr-1 rounded-full"
               >
                 {tech}
               </span>
@@ -28,9 +31,12 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <div className="text-stone-500 text-xs text-left sm:text-right">
+      <Link
+        className="text-stone-500 block text-xs text-left sm:text-right hover:text-stone-400"
+        href="/Projects"
+      >
         View all -{">"}
-      </div>
+      </Link>
     </div>
   );
 }

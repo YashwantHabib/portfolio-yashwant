@@ -20,7 +20,7 @@ function Navbar() {
         <React.Fragment key={href}>
           <Link
             href={href}
-            className={pathname === href ? "text-white" : "text-stone-500"}
+            className={pathname === href ? "text-stone-100" : "text-stone-500"}
           >
             {label}
           </Link>

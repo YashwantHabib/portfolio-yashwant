@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Intro />
-      <div className="flex flex-col sm:flex-row">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 ">
         <Experience />
         <Projects />
       </div>

@@ -1,18 +1,31 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { intro } from "../_data/intro";
 
 export default function Intro() {
+  const [showIcon, setShowIcon] = useState(false);
+  const [showStack, setShowStack] = useState(false); // ← New state for stack tooltip
+
+  const handleIconToggle = () => setShowIcon((prev) => !prev);
+  const handleStackToggle = () => setShowStack((prev) => !prev);
   return (
-    <div className="py-4">
+    <div className="py-4 pt-18 ">
       <p className="text-lg text-stone-100">{intro.name}</p>
       <p className="text-xs text-stone-500">
         {intro.title} | {intro.location}
       </p>
       <p className="py-6 text-stone-100">
         {intro.taglineStart}{" "}
-        <span className="relative group underline italic">
-          {intro.taglineStrike}
-          <span className="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+        <span
+          className="relative group underline italic cursor-pointer"
+          onClick={handleIconToggle}
+        >
+          vigilante
+          <span
+            className={`absolute -top-6 bg-black left-1/2 -translate-x-1/2 transition-opacity ${
+              showIcon ? "opacity-100" : "opacity-0"
+            } group-hover:opacity-100`}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 text-red-700"
@@ -33,11 +46,18 @@ export default function Intro() {
           </span>
         </span>{" "}
         {intro.taglineEnd}{" "}
-        <span className="relative group underline italic cursor-help">
+        <span
+          className="relative group underline italic cursor-pointer"
+          onClick={handleStackToggle}
+        >
           stack
-          <span className="absolute top-full mt-2 hidden group-hover:grid grid-cols-3 gap-4 border border-stone-700  translate-x-1/2 rounded bg-stone-800 px-3 py-2 text-xs text-stone-100 shadow">
+          <span
+            className={`absolute top-full   sm:translate-x-1/2 mt-2 grid ${
+              showStack ? "opacity-100" : "opacity-0"
+            } grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-2 max-w-[250px] sm:max-w-[400px] w-max border border-stone-700 rounded bg-stone-800 px-3 py-2 text-xs text-stone-100 shadow group-hover:opacity-100`}
+          >
             {intro.stack.map((tech) => (
-              <span key={tech} className="whitespace-nowrap ">
+              <span key={tech} className="break-words whitespace-normal">
                 {tech}
               </span>
             ))}
