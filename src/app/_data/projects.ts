@@ -1,5 +1,3 @@
-import { Project } from "../_types";
-
 export const projects = [
   {
     title: "Climo",
