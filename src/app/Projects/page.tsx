@@ -6,7 +6,7 @@ export default function ProjectsPage() {
     <div className="flex-1 py-20 ">
       <p className="text-lg text-stone-100">Projects</p>
       <p className="text-xs text-stone-500">
-        A collection of projects I've worked on.
+        A collection of projects I&apos;ve worked on.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8  mt-12">
         {projects.map((project) => (
