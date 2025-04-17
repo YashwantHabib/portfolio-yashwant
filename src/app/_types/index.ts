@@ -21,4 +21,5 @@ export type Intro = {
   taglineStart: string;
   taglineStrike: string;
   taglineEnd: string;
+  stack: string[];
 };

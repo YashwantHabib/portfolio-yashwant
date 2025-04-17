@@ -8,7 +8,9 @@ export default function Experience() {
         {experience.map((exp) => (
           <div key={exp.company} className="py-6 cursor-pointer ">
             <div className="flex items-center gap-4">
-              <span className="text-sm text-stone-100 ">{exp.company}</span>
+              <span className="text-sm text-stone-100 underline decoration-wavy decoration-stone-600 hover:decoration-stone-400">
+                {exp.company}
+              </span>
               <div className="flex-1 border-t border-stone-700" />
               <span className="text-xs text-stone-500 ">{exp.duration}</span>
             </div>

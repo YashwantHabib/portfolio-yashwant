@@ -7,4 +7,12 @@ export const intro: Intro = {
   taglineStart: "By day, a developer. By night, a bug-slaying ",
   taglineStrike: "vigilante",
   taglineEnd: "restoring order to broken builds with his",
+  stack: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind",
+    "JavaScript",
+    "MongoDB",
+  ],
 };

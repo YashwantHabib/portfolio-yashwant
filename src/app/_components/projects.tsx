@@ -10,14 +10,16 @@ export default function Projects() {
         {projects.map((project) => (
           <div key={project.title} className="py-6 cursor-pointer">
             <div className="flex items-center gap-4">
-              <span className="text-sm text-stone-100 ">{project.title}</span>
+              <span className="text-sm text-stone-100 underline decoration-wavy decoration-stone-600 hover:decoration-stone-400">
+                {project.title}
+              </span>
               <div className="flex-1 border-t border-stone-700" />
               <span className="text-xs text-stone-500 ">{project.year}</span>
             </div>
             {project.tech.map((tech) => (
               <span
                 key={tech}
-                className="inline-block text-[10px] bg-stone-100 text-stone-800 px-2 py-1 my-1 mr-1 rounded-full"
+                className="inline-block text-[10px] bg-stone-100 text-stone-800 px-2 py-1 my-2 mr-1 rounded-full"
               >
                 {tech}
               </span>

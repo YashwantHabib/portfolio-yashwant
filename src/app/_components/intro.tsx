@@ -35,8 +35,12 @@ export default function Intro() {
         {intro.taglineEnd}{" "}
         <span className="relative group underline italic cursor-help text-white">
           stack
-          <span className="absolute top-full mt-2 hidden w-max rounded bg-white px-2 py-1 text-xs text-black shadow group-hover:block">
-            React · TypeScript · Tailwind · Firebase
+          <span className="absolute top-full mt-2 hidden group-hover:grid grid-cols-3 gap-4 border border-stone-700  translate-x-1/2 rounded bg-stone-800 px-3 py-2 text-xs text-stone-100 shadow">
+            {intro.stack.map((tech) => (
+              <span key={tech} className="whitespace-nowrap ">
+                {tech}
+              </span>
+            ))}
           </span>
         </span>
       </p>
