@@ -4,11 +4,11 @@ import { intro } from "../_data/intro";
 export default function Intro() {
   return (
     <div className="py-4">
-      <p className="text-lg">{intro.name}</p>
+      <p className="text-lg text-stone-100">{intro.name}</p>
       <p className="text-xs text-stone-500">
         {intro.title} | {intro.location}
       </p>
-      <p className="py-6">
+      <p className="py-6 text-stone-100">
         {intro.taglineStart}{" "}
         <span className="relative group underline italic">
           {intro.taglineStrike}
@@ -33,7 +33,7 @@ export default function Intro() {
           </span>
         </span>{" "}
         {intro.taglineEnd}{" "}
-        <span className="relative group underline italic cursor-help text-white">
+        <span className="relative group underline italic cursor-help">
           stack
           <span className="absolute top-full mt-2 hidden group-hover:grid grid-cols-3 gap-4 border border-stone-700  translate-x-1/2 rounded bg-stone-800 px-3 py-2 text-xs text-stone-100 shadow">
             {intro.stack.map((tech) => (
