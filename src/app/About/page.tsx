@@ -38,19 +38,22 @@ export default function About() {
       {/* Creative Side */}
       <Section title={aboutData.creative.heading}>
         <p className="mt-2">{aboutData.creative.note}</p>
-        <ul className="list-disc list-inside mx-4 space-y-1">
+        <ul className="list-disc list-inside mx-4 my-2">
           {aboutData.creative.activities.map((act, idx) => (
-            <li key={idx}>{act}</li>
+            <li key={idx}>
+              {act}{" "}
+              {act.includes("Instagram") ? (
+                <a
+                  href={aboutData.creative.Link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-blue-600 hover:underline font-medium"
+                >
+                  <LinkIcon className="w-4 h-4" />
+                </a>
+              ) : null}
+            </li>
           ))}
-          <a
-            href={aboutData.creative.Link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-2 text-blue-600 hover:underline font-medium"
-          >
-            <LinkIcon className="w-4 h-4" />
-            Check out my reels on Instagram
-          </a>
         </ul>
       </Section>
 

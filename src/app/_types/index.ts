@@ -1,10 +1,12 @@
 export type Project = {
   title: string;
   description: string;
+  longDesc: string;
   tech: string[];
   year: string;
   LiveLink?: string;
   GitLink?: string;
+  image?: string;
 };
 
 export type Experience = {
