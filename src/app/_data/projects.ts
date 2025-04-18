@@ -1,4 +1,6 @@
-export const projects = [
+import { Project } from "../_types";
+
+export const projects: Project[] = [
   {
     title: "Climo",
     tech: ["React Native"],
@@ -16,7 +18,7 @@ export const projects = [
   },
   {
     title: "FarmEase",
-    tech: ["React", "MongoDB", "Flask", "Machine Learning"],
+    tech: ["React", "MongoDB", "Python", "Machine Learning"],
     description:
       "A web app that helps farmers detect crop diseases using a custom image model, view weather forecasts and more",
     year: "2025",
