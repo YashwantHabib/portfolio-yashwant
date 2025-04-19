@@ -2,12 +2,13 @@ import { blogs } from "@/app/_data/blog";
 import { notFound } from "next/navigation";
 import { Link as LinkIcon } from "lucide-react";
 
-type Props = {
-  params: { slug: string };
-};
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
 
-export default function BlogPost({ params }: Props) {
-  // No async needed, because this is just static data
+export default function BlogPost({ params }: PageProps) {
   const blog = blogs.find((b) => b.slug === params.slug);
 
   if (!blog) return notFound();
@@ -48,4 +49,10 @@ export default function BlogPost({ params }: Props) {
       ))}
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  return blogs.map((blog) => ({
+    slug: blog.slug,
+  }));
 }

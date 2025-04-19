@@ -26,7 +26,7 @@ export const blogs: Blogs[] = [
         desc: "It is super flexible—if a section does not have a link or image, it just skips that part. And I get full type safety thanks to TypeScript.",
         link: "https://codefile.io/f/O1L1NKERFa",
         linkText: "Here's the code snippet on how I rendered these sections",
-        img: "https://github.com/YashwantHabib/Weather-App/raw/main/BlogRender.png",
+        img: "https://github.com/YashwantHabib/Weather-App/raw/main/BlogreRender.png",
       },
       {
         title: "Final Thoughts",
