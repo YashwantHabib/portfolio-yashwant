@@ -2,10 +2,12 @@ import { blogs } from "@/app/_data/blog";
 import { notFound } from "next/navigation";
 import { Link as LinkIcon } from "lucide-react";
 
+interface Params {
+  slug: string;
+}
+
 interface PageProps {
-  params: {
-    slug: string;
-  };
+  params: Params;
 }
 
 export default function BlogPost({ params }: PageProps) {
