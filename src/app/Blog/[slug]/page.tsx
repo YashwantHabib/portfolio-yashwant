@@ -6,7 +6,7 @@ type Props = {
   params: { slug: string };
 };
 
-export default async function BlogPost({ params }: Props) {
+export default function BlogPost({ params }: Props) {
   const blog = blogs.find((b) => b.slug === params.slug);
 
   if (!blog) return notFound();
