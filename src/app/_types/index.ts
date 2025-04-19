@@ -25,3 +25,17 @@ export type Intro = {
   taglineEnd: string;
   stack: string[];
 };
+
+export type Blogs = {
+  slug: string;
+  title: string;
+  date: string;
+  desc: string;
+  sections: {
+    title?: string;
+    desc?: string;
+    link?: string;
+    linkText?: string;
+    img?: string;
+  }[];
+};
