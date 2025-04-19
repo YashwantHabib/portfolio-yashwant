@@ -7,6 +7,7 @@ type Props = {
 };
 
 export default function BlogPost({ params }: Props) {
+  // No async needed, because this is just static data
   const blog = blogs.find((b) => b.slug === params.slug);
 
   if (!blog) return notFound();
