@@ -7,8 +7,8 @@ export default function Blog() {
     <div className="flex-1 py-20 relative">
       <p className="text-lg text-stone-100">Blogs</p>
       <p className="text-xs text-stone-500">
-        Throughout this year, I have worked with various technologies. I'm here
-        to share just that.
+        Throughout this year, I have worked with various technologies. I&apos;m
+        here to share just that.
       </p>
       <div className=" gap-8 mt-12">
         {blogs
