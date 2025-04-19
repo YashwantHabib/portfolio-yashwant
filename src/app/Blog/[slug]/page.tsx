@@ -2,15 +2,7 @@ import { blogs } from "@/app/_data/blog";
 import { notFound } from "next/navigation";
 import { Link as LinkIcon } from "lucide-react";
 
-interface Params {
-  slug: string;
-}
-
-interface PageProps {
-  params: Params;
-}
-
-export default function BlogPost({ params }: PageProps) {
+export default function BlogPost({ params }: { params: { slug: string } }) {
   const blog = blogs.find((b) => b.slug === params.slug);
 
   if (!blog) return notFound();
@@ -51,10 +43,4 @@ export default function BlogPost({ params }: PageProps) {
       ))}
     </div>
   );
-}
-
-export async function generateStaticParams() {
-  return blogs.map((blog) => ({
-    slug: blog.slug,
-  }));
 }
