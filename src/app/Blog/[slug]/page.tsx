@@ -14,7 +14,7 @@ export default async function BlogPost({
   if (!blog) return notFound();
 
   return (
-    <div className="py-15">
+    <div className="py-10">
       <BackButton />
       <h1 className="text-lg text-stone-100 mb-2">{blog.title}</h1>
       <p className="text-xs text-stone-500 mb-6">{blog.date}</p>

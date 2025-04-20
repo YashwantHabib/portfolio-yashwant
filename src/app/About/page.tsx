@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <section className=" py-15">
+    <section className=" py-10">
       <BackButton />
       <h2 className="text-lg mb-8 text-stone-100">About Me</h2>
 

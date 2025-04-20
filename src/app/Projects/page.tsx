@@ -11,7 +11,7 @@ export default function ProjectsPage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <div className="flex-1 py-15 relative">
+    <div className="flex-1 py-10 relative">
       <BackButton />
       <p className="text-lg text-stone-100">Projects</p>
       <p className="text-xs text-stone-500">
