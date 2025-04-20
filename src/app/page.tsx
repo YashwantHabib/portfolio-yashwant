@@ -5,7 +5,7 @@ import Socials from "./_components/socials";
 
 export default function Home() {
   return (
-    <div>
+    <div className="py-20">
       <Intro />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 ">
         <Experience />
