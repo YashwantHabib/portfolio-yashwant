@@ -1,6 +1,7 @@
 import { blogs } from "@/app/_data/blog";
 import { notFound } from "next/navigation";
 import { Link as LinkIcon } from "lucide-react";
+import BackButton from "@/app/_components/BackButton";
 
 export default async function BlogPost({
   params,
@@ -13,7 +14,8 @@ export default async function BlogPost({
   if (!blog) return notFound();
 
   return (
-    <div className="py-20 px-4 max-w-3xl mx-auto">
+    <div className="py-15">
+      <BackButton />
       <h1 className="text-lg text-stone-100 mb-2">{blog.title}</h1>
       <p className="text-xs text-stone-500 mb-6">{blog.date}</p>
 

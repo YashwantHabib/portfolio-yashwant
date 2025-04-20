@@ -1,8 +1,10 @@
 import { experience } from "../_data/experience";
+import BackButton from "../_components/BackButton";
 
 export default function Exp() {
   return (
-    <div className="flex-1 py-20 relative">
+    <div className="flex-1 py-15 relative">
+      <BackButton />
       <p className="text-lg text-stone-100">Experience</p>
       <p className="text-xs text-stone-500">
         A collection of work I&apos;ve done.

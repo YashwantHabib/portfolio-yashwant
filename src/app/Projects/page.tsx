@@ -4,13 +4,15 @@ import React, { useState } from "react";
 import { projects } from "../_data/projects";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import BackButton from "../_components/BackButton";
 
 export default function ProjectsPage() {
   type Project = (typeof projects)[number];
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <div className="flex-1 py-20 relative">
+    <div className="flex-1 py-15 relative">
+      <BackButton />
       <p className="text-lg text-stone-100">Projects</p>
       <p className="text-xs text-stone-500">
         A collection of projects I&apos;ve worked on.

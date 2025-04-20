@@ -2,9 +2,9 @@ import { Blogs } from "../_types";
 
 export const blogs: Blogs[] = [
   {
-    title: "Building My Blog Section with TypeScript and JSON",
+    title: "Building My Blog",
     date: "April 19, 2025",
-    desc: "Instead of hardcoding everything or setting up a full CMS, I went with a simple but effective approach: Here is how.",
+    desc: "Instead of hardcoding everything or setting up a full CMS, I went with a simple but effective approach: Here is how I built it using Typescript and JSON",
     slug: "building-my-blog-section",
     sections: [
       {
