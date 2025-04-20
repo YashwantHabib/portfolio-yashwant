@@ -9,7 +9,7 @@ export default function Intro() {
   const handleIconToggle = () => setShowIcon((prev) => !prev);
   const handleStackToggle = () => setShowStack((prev) => !prev);
   return (
-    <div className="py-4 pt-18 ">
+    <div className="py-20">
       <p className="text-lg text-stone-100">{intro.name}</p>
       <p className="text-xs text-stone-500">
         {intro.title} | {intro.location}
