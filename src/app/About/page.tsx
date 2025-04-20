@@ -1,13 +1,11 @@
 import React from "react";
-import BackButton from "../_components/BackButton";
 import { aboutData } from "../_data/aboutData";
 import { Link as LinkIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function About() {
   return (
-    <section className=" py-10">
-      <BackButton />
+    <section className=" py-20">
       <h2 className="text-lg mb-8 text-stone-100">About Me</h2>
 
       {/* Intro */}
