@@ -77,14 +77,26 @@ export default function Projects() {
                 {selectedProject.longDesc}
               </p>
               <div className="flex flex-wrap gap-2">
-                {selectedProject.GitLink ? (
+                {selectedProject.GitLink && (
                   <Link
                     className="my-2 text-stone-300 block text-xs text-right italic underline hover:text-stone-200"
                     href={selectedProject.GitLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Github
                   </Link>
-                ) : null}
+                )}
+                {selectedProject.LiveLink && (
+                  <Link
+                    className="my-2 text-stone-300 block text-xs text-right italic underline hover:text-stone-200"
+                    href={selectedProject.LiveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo
+                  </Link>
+                )}
               </div>
               <img
                 src={selectedProject.image}
