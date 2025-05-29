@@ -2,6 +2,20 @@ import { Project } from "../_types";
 
 export const projects: Project[] = [
   {
+    title: "Inkline",
+    description:
+      "A sleek news app that delivers real-time updates from various RSS feeds.",
+    longDesc:
+      "This project is a responsive news aggregation app built using RSS feeds. It fetches and displays articles from multiple sources, categorizes news by topic, and provides a clean, user-friendly interface for reading headlines. The app is designed for speed and readability, with a focus on real-time content delivery using public RSS APIs.",
+    tech: ["ReactNative", "RSS Feed APIs"],
+    year: "2025",
+    LiveLink:
+      "https://drive.google.com/file/d/14MSCyvwt88rgOAWFjNgXK41mV0q8rGj7/view?usp=sharing",
+    GitLink: "https://github.com/YashwantHabib/Inkline", // replace with actual repo
+    image: "https://github.com/YashwantHabib/Weather-App/blob/main/Inkline.png", // replace with actual image path
+  },
+
+  {
     title: "Climo",
     tech: ["React Native"],
     description:
