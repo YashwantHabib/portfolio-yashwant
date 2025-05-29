@@ -11,8 +11,9 @@ export const projects: Project[] = [
     year: "2025",
     LiveLink:
       "https://drive.google.com/file/d/14MSCyvwt88rgOAWFjNgXK41mV0q8rGj7/view?usp=sharing",
-    GitLink: "https://github.com/YashwantHabib/Inkline", // replace with actual repo
-    image: "https://github.com/YashwantHabib/Weather-App/blob/main/Inkline.png", // replace with actual image path
+    GitLink: "https://github.com/YashwantHabib/Inkline",
+    image:
+      "https://github.com/YashwantHabib/Weather-App/blob/main/Inkline.png?raw=true",
   },
 
   {
