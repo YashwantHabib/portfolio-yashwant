@@ -85,6 +85,14 @@ export default function ProjectsPage() {
                   >
                     Github
                   </Link>
+                ) : null}{" "}
+                {selectedProject.LiveLink ? (
+                  <Link
+                    className="my-2 text-stone-300 block text-xs text-right italic underline hover:text-stone-200"
+                    href={selectedProject.LiveLink}
+                  >
+                    Github
+                  </Link>
                 ) : null}
               </div>
               <img
