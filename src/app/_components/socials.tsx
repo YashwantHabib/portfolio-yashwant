@@ -7,7 +7,7 @@ export default function Socials() {
     <div className="py-4">
       <div className="flex flex-row justify-center gap-4">
         <a
-          href="https://drive.google.com/file/d/1NbT2MF4WWQwd5BqkAcIzPtXNJeGksnzu/view?usp=drivesdk"
+          href="https://drive.google.com/file/d/18hEq-JtmI_0EgjLvZX-axJnJstI8e95U/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Resume"
