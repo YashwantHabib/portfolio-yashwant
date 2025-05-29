@@ -86,6 +86,8 @@ export default function ProjectsPage() {
                     Github
                   </Link>
                 ) : null}{" "}
+              </div>
+              <div className="flex flex-wrap gap-2">
                 {selectedProject.LiveLink ? (
                   <Link
                     className="my-2 text-stone-300 block text-xs text-right italic underline hover:text-stone-200"
@@ -93,7 +95,7 @@ export default function ProjectsPage() {
                   >
                     Github
                   </Link>
-                ) : null}
+                ) : null}{" "}
               </div>
               <img
                 src={selectedProject.image}
