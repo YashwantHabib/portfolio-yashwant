@@ -10,7 +10,7 @@ export const projects: Project[] = [
     tech: ["ReactNative", "RSS Feed APIs"],
     year: "2025",
     LiveLink:
-      "https://drive.google.com/file/d/14MSCyvwt88rgOAWFjNgXK41mV0q8rGj7/view?usp=sharing",
+      "https://drive.google.com/file/d/1TU-EROBitjTY70hQqZGHPpgK-TNXiq0K/view?usp=sharing",
     GitLink: "https://github.com/YashwantHabib/Inkline",
     image:
       "https://github.com/YashwantHabib/Weather-App/blob/main/Inkline.png?raw=true",
