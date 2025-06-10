@@ -18,7 +18,7 @@ export default function Blog() {
             <Link key={blog.slug} href={`/Blog/${blog.slug}`}>
               <div
                 key={blog.title}
-                className="p-2 border-b rounded-lg cursor-pointer hover:bg-zinc-900 mb-2"
+                className="p-2 rounded-lg cursor-pointer hover:bg-zinc-900 mb-2"
               >
                 <div className="flex items-center gap-4 mb-2">
                   <span className="text-sm text-stone-100 underline decoration-wavy decoration-stone-600 hover:decoration-stone-400">
