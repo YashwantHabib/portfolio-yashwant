@@ -13,7 +13,7 @@ export const projects: Project[] = [
       "https://drive.google.com/file/d/1TU-EROBitjTY70hQqZGHPpgK-TNXiq0K/view?usp=sharing",
     GitLink: "https://github.com/YashwantHabib/Inkline",
     image:
-      "https://github.com/YashwantHabib/Weather-App/blob/main/Inkline.png?raw=true",
+      "https://github.com/YashwantHabib/Inkline/blob/main/screenshots/Inkline_Screenshot.jpg?raw=true",
   },
 
   {

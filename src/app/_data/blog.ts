@@ -2,6 +2,49 @@ import { Blogs } from "../_types";
 
 export const blogs: Blogs[] = [
   {
+    title: "How I Built Inkline: A React Native News App",
+    date: "June 10, 2025",
+    desc: "Inkline is a sleek, mobile-first news app built with React Native. Here's how I brought it to life—from the tech stack and design decisions to challenges and lessons learned.",
+    slug: "building-inkline-react-native",
+    sections: [
+      {
+        title: "Why I Built Inkline",
+        desc: "I wanted a personal news app with a clean UI, reliable news sourcing, and offline capability for quick skimming. None of the existing apps gave me exactly what I wanted—so I built it myself using React Native.",
+      },
+      {
+        title: "Tech Stack Overview",
+        desc: "The app was built with React Native, using RSS feeds to fetch news, React Navigation for routing, and WebView to render full articles inside the app. I used Gradle to build APKs and test directly on Android devices.",
+      },
+      {
+        title: "Key Features",
+        desc: "- News feed UI with clean typography\n- WebView to open full articles in-app\n- Responsive layout with scrollable article cards\n- Custom app icon\n- Fully functional APK build to install and share",
+      },
+      {
+        title: "Challenges I Faced",
+        desc: "RSS integration required extra parsing logic. Changing the app icon didn’t reflect immediately due to cache issues. Debugging WebView crashes and optimizing FlatList rendering were also time-consuming.",
+      },
+      {
+        title: "Screenshots & Demo",
+        desc: "Here's how the app looks on a real device. You can see the main feed, WebView article, and minimal design focus.",
+        img: "https://github.com/YashwantHabib/Inkline/blob/main/screenshots/Inkline_Screenshot.jpg?raw=true",
+        link: "https://drive.google.com/file/d/1TU-EROBitjTY70hQqZGHPpgK-TNXiq0K/view?usp=sharing",
+        linkText: "Download the APK",
+      },
+      {
+        title: "What I Learned",
+        desc: "Building Inkline improved my understanding of React Native's native build process and helped me get comfortable with debugging Android-specific issues. I also refined my design-to-code translation skills.",
+      },
+      {
+        title: "What's Next?",
+        desc: "I'm planning to add support for source categories,  and push notifications in the next version.",
+      },
+      {
+        title: "Final Thoughts",
+        desc: "Inkline was a passion project that let me explore full-cycle app development—from idea to installable product. It’s a valuable addition to my portfolio and a stepping stone to more complex mobile products.",
+      },
+    ],
+  },
+  {
     title: "Building My Blog",
     date: "April 19, 2025",
     desc: "Instead of hardcoding everything or setting up a full CMS, I went with a simple but effective approach: Here is how I built it using Typescript and JSON",
