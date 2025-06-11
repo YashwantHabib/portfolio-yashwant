@@ -25,8 +25,10 @@ export const projects: Project[] = [
       "Climo is a unique weather experience — a React Native app that lets users explore live weather data. Use the intuitive slider to visualize weather transitions as you play your favorite tracks.",
     year: "2025",
     GitLink: "https://github.com/YashwantHabib/Climo",
+    LiveLink:
+      "https://drive.google.com/file/d/1DmuSDh1slrSp1ISgKKKJi5au52DiaFC9/view?usp=sharing",
     image:
-      "https://github.com/YashwantHabib/Climo/raw/main/screenshots/climo-ss.png",
+      "https://github.com/YashwantHabib/Climo/blob/main/screenshots/Climo_SS.jpg?raw=true",
   },
   {
     title: "Movie Booking Site",
