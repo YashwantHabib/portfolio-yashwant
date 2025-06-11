@@ -77,4 +77,40 @@ export const blogs: Blogs[] = [
       },
     ],
   },
+  {
+    title: "Why I Chose React Native Over Flutter in 2025",
+    date: "June 11, 2025",
+    desc: "With both React Native and Flutter evolving fast, choosing between them in 2025 isn’t easy. Here’s why I picked React Native for my latest projects and what I learned in the process.",
+    slug: "why-react-native-over-flutter",
+    sections: [
+      {
+        title: "The Context",
+        desc: "While starting my mobile development journey, I had two strong options: Flutter and React Native. Both offered cross-platform support, strong community backing, and UI flexibility. But I had to pick one that best aligned with my goals, speed of development, and long-term usability.",
+      },
+      {
+        title: "Why React Native Fit My Needs",
+        desc: "I was already comfortable with JavaScript and React, so the learning curve was much shorter. I didn’t need to learn Dart or Flutter’s widget tree concepts from scratch. I could reuse some logic from my React web apps and felt at home working with familiar tools like useState, useEffect, and async/await.",
+      },
+      {
+        title: "Technical Comparisons That Mattered",
+        desc: "React Native gave me a faster prototyping cycle thanks to hot reloading and my existing JavaScript knowledge. Integrating third-party packages—especially native modules—was simpler and more documented. One of my key app features involved rendering external articles, and React Native's WebView implementation was smoother and better supported. In contrast, Flutter felt a bit heavier, especially for smaller projects, and its default setup added more friction than I expected. Additionally, debugging native issues in Flutter required deeper Android Studio knowledge, which wasn’t ideal for my use case at the time.",
+      },
+      {
+        title: "Performance Observations",
+        desc: "Flutter tends to have the upper hand when it comes to animation-heavy or highly customized UI applications. But for my use case—primarily focused on displaying news articles, fetching RSS feeds, and opening links in-app—React Native provided perfectly smooth performance. Using FlatList efficiently and minimizing re-renders helped maintain responsiveness even on lower-end devices.",
+      },
+      {
+        title: "Ecosystem & Community",
+        desc: "React Native’s mature ecosystem played a huge role. The availability of well-maintained libraries like react-navigation, react-native-vector-icons, and react-native-webview saved me time and effort. Most problems I faced had already been asked—and solved—on StackOverflow or GitHub. While Flutter’s ecosystem is growing rapidly, React Native still feels more stable and production-ready for many common use cases in 2025.",
+      },
+      {
+        title: "Problem I Faced: Native Modules",
+        desc: "One challenge I encountered was implementing a native Android share sheet. While React Native had multiple pre-built libraries, I still ran into a permission issue that blocked the functionality. I fixed it by updating the AndroidManifest.xml and adjusting runtime permissions. This experience reminded me how valuable it is to work within a mature framework where most edge cases have solid community solutions.",
+      },
+      {
+        title: "Conclusion",
+        desc: "Both Flutter and React Native are excellent choices depending on the project scope and developer familiarity. I chose React Native because it aligned with my experience, project requirements, and allowed me to iterate quickly. It’s helped me ship ideas faster without compromising on UX. For future animation-intensive apps or where design consistency across platforms is critical, I may explore Flutter further—but for now, React Native remains my default for cross-platform development.",
+      },
+    ],
+  },
 ];
