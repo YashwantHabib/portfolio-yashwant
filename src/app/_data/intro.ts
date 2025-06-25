@@ -13,6 +13,6 @@ export const intro: Intro = {
     "TypeScript",
     "Tailwind",
     "JavaScript",
-    "MongoDB",
+    "React Native",
   ],
 };
