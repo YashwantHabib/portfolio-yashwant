@@ -5,7 +5,7 @@ export const experience: Experience[] = [
     company: "Pranaksh",
     description:
       "I contributed to designing user-friendly interfaces using React and integrated them with robust backend services using Node.js and Express.",
-    duration: "Dec 2024 - Feb 2025",
+    duration: "Dec 2024 - May 2025",
     role: "Fullstack Developer",
   },
 ];
