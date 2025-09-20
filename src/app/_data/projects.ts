@@ -38,7 +38,8 @@ export const projects: Project[] = [
     year: "2025",
     longDesc:
       "An interactive prompt-sharing app where users can upload images, like, and copy prompts, with a clean UI and seamless Supabase integration for authentication and storage.",
-    image: "https://github.com/YashwantHabib/PromptHub/blob/main/image.png",
+    image:
+      "https://github.com/YashwantHabib/PromptHub/blob/main/screenshots/Desktop.png?raw=true",
     LiveLink: "https://promptify99.vercel.app/",
     GitLink: "https://github.com/YashwantHabib/Prompt-Hub",
   },
