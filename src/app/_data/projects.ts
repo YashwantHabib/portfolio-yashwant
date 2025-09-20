@@ -31,16 +31,16 @@ export const projects: Project[] = [
       "https://github.com/YashwantHabib/Climo/blob/main/screenshots/Climo_SS.jpg?raw=true",
   },
   {
-    title: "Movie Booking Site",
-    tech: ["JavaScript", "Node.js", "MySQL"],
+    title: "Promptify",
+    tech: ["React", "Supabase", "Tailwind CSS"],
     description:
-      "A movie booking web app to browse films, check showtimes, and book seats.",
-    year: "2023",
+      "A full-stack platform where users can create, share, and manage prompts with images, featuring likes, copy tracking, and secure Supabase-based authentication and storage.",
+    year: "2025",
     longDesc:
-      "A full-stack movie booking web application that allows users to browse movies, view details, and book tickets with ease. Built using modern web technologies and connected to a MySQL database for persistent data handling.",
-    image:
-      "https://github.com/YashwantHabib/movie-booking/raw/main/screenshots/movie-booking.png",
-    GitLink: "https://github.com/YashwantHabib/movie-booking",
+      "An interactive prompt-sharing app where users can upload images, like, and copy prompts, with a clean UI and seamless Supabase integration for authentication and storage.",
+    image: "https://github.com/YashwantHabib/PromptHub/blob/main/image.png",
+    LiveLink: "https://promptify99.vercel.app/",
+    GitLink: "https://github.com/YashwantHabib/Prompt-Hub",
   },
   {
     title: "FarmEase",
