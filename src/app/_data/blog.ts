@@ -113,4 +113,28 @@ export const blogs: Blogs[] = [
       },
     ],
   },
+  {
+    title: "Started My Journey at Scientific Games",
+    date: "December 12, 2025",
+    desc: "A short reflection on starting my new journey and discovering how code and creativity come together in ways I’ve always dreamed of.",
+    slug: "code-and-creativity",
+    sections: [
+      {
+        title: "A New Beginning",
+        desc: "Last month marked the beginning of my internship at Scientific Games — and honestly, it still feels unreal. Working in the gaming space has always been a dream of mine, and getting the chance to be part of a team in this industry is something I’m genuinely grateful for.",
+      },
+      {
+        title: "Learning the Craft",
+        desc: "I’m currently going through the training phase, learning new workflows, tools, and ways of thinking. Even in these early weeks, I’ve realized how much depth there is in creating experiences that look simple on the surface but are powered by layers of logic and creativity.",
+      },
+      {
+        title: "Where Code Meets Creativity",
+        desc: "What I love the most is how naturally this environment blends my two favorite things: code and creativity. Every day feels like stepping closer into the world I always imagined myself working in.",
+      },
+      {
+        title: "Looking Ahead",
+        desc: "It’s still early, but I’m excited — excited to learn, excited to grow, and excited to contribute in whatever meaningful ways I can. More updates soon. 🙂",
+      },
+    ],
+  },
 ];
