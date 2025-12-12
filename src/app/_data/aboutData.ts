@@ -1,7 +1,7 @@
 export const aboutData = {
   intro: {
     heading: "Who Am I?",
-    content: `A curious mind with a love for code and creativity. I’m a final-year CS student who enjoys building user-centric applications that merge logic with design.`,
+    content: `A curious mind with a love for code and creativity. I’m a recent CS graduate who enjoys building user-centric applications that merge logic with design.`,
   },
   tech: {
     heading: "What I Do",
