@@ -1,39 +1,19 @@
 "use client";
 
-import { motion, useAnimation } from "framer-motion";
-import { usePathname, useRouter } from "next/navigation";
-import { routes } from "@/app/lib/routes";
+import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+import type { ReactNode } from "react";
 
-export default function SwipeWrapper({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const router = useRouter();
+export default function PageTransition({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const controls = useAnimation();
-
-  const index = routes.indexOf(pathname);
-
-  const handleDragEnd = async (_: any, info: any) => {
-    if (info.offset.x < -120 && index < routes.length - 1) {
-      router.push(routes[index + 1]);
-    } else if (info.offset.x > 120 && index > 0) {
-      router.push(routes[index - 1]);
-    }
-
-    // 🔑 RESET POSITION — THIS IS THE FIX
-    await controls.start({ x: 0 });
-  };
 
   return (
     <motion.div
-      drag="x"
-      dragConstraints={{ left: 0, right: 0 }}
-      dragElastic={0.1}
-      animate={controls}
-      onDragEnd={handleDragEnd}
-      className="h-full"
+      key={pathname}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.25, ease: "easeInOut" }}
+      className="min-h-screen"
     >
       {children}
     </motion.div>
