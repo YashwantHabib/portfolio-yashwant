@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/navbar";
+import PageTransition from "./_components/PageTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,17 +22,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="bg-[#0d0d0d]  min-h-screen p-8 pb-20 sm:p-20 sm:px-[28%] font-[family-name:var(--font-geist-mono)]">
+        <div className="bg-[#0d0d0d] min-h-screen p-8 pb-20 sm:p-20 sm:px-[28%] font-[family-name:var(--font-geist-mono)] overflow-hidden">
           <Navbar />
-          {children}
+
+          {/* 👇 Client animation wrapper */}
+          <PageTransition>{children}</PageTransition>
         </div>
       </body>
     </html>
