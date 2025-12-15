@@ -3,6 +3,7 @@
 import { motion, useAnimation } from "framer-motion";
 import type { PanInfo } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import { routes } from "@/app/lib/routes";
 
@@ -13,6 +14,31 @@ export default function SwipeWrapper({ children }: { children: ReactNode }) {
 
   const index = routes.indexOf(pathname);
   const isBlogSlug = pathname.startsWith("/Blog/");
+
+  const hintShownRef = useRef(false);
+  const [showToast, setShowToast] = useState(false);
+
+  useEffect(() => {
+    if (hintShownRef.current) return;
+
+    const isTouchDevice =
+      typeof window !== "undefined" &&
+      window.matchMedia("(pointer: coarse)").matches;
+
+    if (!isTouchDevice) return;
+
+    hintShownRef.current = true;
+    setShowToast(true);
+
+    controls
+      .start({
+        x: [0, -8, 0],
+        transition: { duration: 0.6, ease: "easeInOut" },
+      })
+      .then(() => {
+        setShowToast(false);
+      });
+  }, [controls]);
 
   const handleDragEnd = async (
     _: MouseEvent | TouchEvent | PointerEvent,
@@ -30,20 +56,30 @@ export default function SwipeWrapper({ children }: { children: ReactNode }) {
       router.push(routes[index - 1]);
     }
 
-    await controls.set({ x: 0 });
+    controls.set({ x: 0 });
   };
 
   return (
-    <motion.div
-      drag="x"
-      dragConstraints={{ left: 0, right: 0 }}
-      dragElastic={0.1}
-      initial={false}
-      animate={controls}
-      onDragEnd={handleDragEnd}
-      className="h-full"
-    >
-      {children}
-    </motion.div>
+    <>
+      {/* Swipeable content */}
+      <motion.div
+        drag="x"
+        dragConstraints={{ left: 0, right: 0 }}
+        dragElastic={0.1}
+        animate={controls}
+        initial={false}
+        onDragEnd={handleDragEnd}
+        className="h-full"
+      >
+        {children}
+      </motion.div>
+
+      {/* Tiny swipe toast */}
+      {showToast && (
+        <div className="fixed bottom-5 left-1/2 -translate-x-1/2 text-[11px] text-stone-400 bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm pointer-events-none">
+          Swipe to switch tabs
+        </div>
+      )}
+    </>
   );
 }
