@@ -3,7 +3,7 @@
 import { motion, useAnimation } from "framer-motion";
 import type { PanInfo } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import { routes } from "@/app/lib/routes";
 
@@ -14,31 +14,42 @@ export default function SwipeWrapper({ children }: { children: ReactNode }) {
 
   const index = routes.indexOf(pathname);
   const isBlogSlug = pathname.startsWith("/Blog/");
+  const toastText = isBlogSlug ? "Swipe back" : "Swipe to switch tabs";
 
-  const hintShownRef = useRef(false);
-  const [showToast, setShowToast] = useState(false);
+  const [showToast, setShowToast] = useState(true);
+
+  const shouldShowHint = pathname === "/" || pathname.startsWith("/Blog/");
 
   useEffect(() => {
-    if (hintShownRef.current) return;
+    if (!shouldShowHint) {
+      setShowToast(false);
+      return;
+    }
 
     const isTouchDevice =
       typeof window !== "undefined" &&
       window.matchMedia("(pointer: coarse)").matches;
 
-    if (!isTouchDevice) return;
+    if (!isTouchDevice) {
+      setShowToast(false);
+      return;
+    }
 
-    hintShownRef.current = true;
     setShowToast(true);
 
-    controls
-      .start({
-        x: [0, -8, 0],
-        transition: { duration: 0.6, ease: "easeInOut" },
-      })
-      .then(() => {
-        setShowToast(false);
-      });
-  }, [controls]);
+    // Micro swipe hint
+    controls.start({
+      x: isBlogSlug ? [0, 8, 0] : [0, -8, 0],
+      transition: { duration: 1.2, ease: "easeInOut" },
+    });
+
+    // Auto-hide toast
+    const timer = setTimeout(() => {
+      setShowToast(false);
+    }, 2200);
+
+    return () => clearTimeout(timer);
+  }, [controls, shouldShowHint]);
 
   const handleDragEnd = async (
     _: MouseEvent | TouchEvent | PointerEvent,
@@ -61,7 +72,6 @@ export default function SwipeWrapper({ children }: { children: ReactNode }) {
 
   return (
     <>
-      {/* Swipeable content */}
       <motion.div
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
@@ -74,10 +84,9 @@ export default function SwipeWrapper({ children }: { children: ReactNode }) {
         {children}
       </motion.div>
 
-      {/* Tiny swipe toast */}
       {showToast && (
         <div className="fixed bottom-5 left-1/2 -translate-x-1/2 text-[11px] text-stone-400 bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm pointer-events-none">
-          Swipe to switch tabs
+          {toastText}
         </div>
       )}
     </>
