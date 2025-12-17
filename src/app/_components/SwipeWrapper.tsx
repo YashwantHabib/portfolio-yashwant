@@ -85,7 +85,7 @@ export default function SwipeWrapper({ children }: { children: ReactNode }) {
       </motion.div>
 
       {showToast && (
-        <div className="fixed top-5 left-1/2 -translate-x-1/2 text-[14px] text-stone-400 bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm pointer-events-none">
+        <div className="fixed top-16 left-1/2 -translate-x-1/2 text-[14px] text-stone-400 bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm pointer-events-none">
           {toastText}
         </div>
       )}
