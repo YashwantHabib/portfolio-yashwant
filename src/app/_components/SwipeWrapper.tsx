@@ -14,11 +14,15 @@ export default function SwipeWrapper({ children }: { children: ReactNode }) {
 
   const index = routes.indexOf(pathname);
   const isBlogSlug = pathname.startsWith("/Blog/");
+  const isExperience = pathname.startsWith("/Experience");
   const toastText = isBlogSlug ? "Swipe back" : "Swipe to switch tabs";
 
   const [showToast, setShowToast] = useState(true);
 
-  const shouldShowHint = pathname === "/" || pathname.startsWith("/Blog/");
+  const shouldShowHint =
+    pathname === "/" ||
+    pathname.startsWith("/Blog/") ||
+    pathname.startsWith("/Experience");
 
   useEffect(() => {
     if (!shouldShowHint) {
@@ -57,6 +61,8 @@ export default function SwipeWrapper({ children }: { children: ReactNode }) {
   ) => {
     if (isBlogSlug && info.offset.x > 120) {
       router.push("/Blog");
+    } else if (isExperience && info.offset.x > 120) {
+      router.push("/");
     } else if (
       info.offset.x < -120 &&
       index !== -1 &&
